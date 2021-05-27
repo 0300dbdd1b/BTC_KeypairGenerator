@@ -5,16 +5,18 @@
 ##  Use :
 
 ```
- ./btc_keypair [compressed] [address_prefix] 
+ ./btc_keypair [compressed_xpub] [address_prefix] [compressed_wif]
 ```
 compressed and address_prefix are both optional 
-default compressed is False
+default compressed_xpub is False
 default prefix is "00"
+default compressed_wif is True ("01")
 
  `````
  ./btc_keypair 
  ./btc_keypair True
  ./btc_keypair True C4
+ ./btc_keypair False 05 False
  `````
 
 
