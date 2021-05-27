@@ -7,7 +7,7 @@
 ```
  ./btc_keypair [compressed_xpub] [address_prefix] [compressed_wif]
 ```
-compressed and address_prefix are both optional  
+compressed , address_prefix and compressed_wif are optional  
 default compressed_xpub is False  
 default prefix is "00"  
 default compressed_wif is True ("01")  
@@ -22,9 +22,10 @@ default compressed_wif is True ("01")
 
 ### Requierements :
 
-- base58  : pip install base58
-- ecdsa   : pip install ecdsa
-- secrets : pip install secrets
+- python3.x
+- base58  : pip3 install base58
+- ecdsa   : pip3 install ecdsa
+- secrets : pip3 install secrets
 
 
 
