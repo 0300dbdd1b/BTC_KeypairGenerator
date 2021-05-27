@@ -5,24 +5,27 @@
 ##  Use :
 
 ```
- ./btc_keypair [compressed] [address_prefix] 
+ ./btc_keypair [compressed_xpub] [address_prefix] [compressed_wif]
 ```
-compressed and address_prefix are both optional 
-default compressed is False
-default prefix is "00"
+compressed , address_prefix and compressed_wif are optional  
+default compressed_xpub is False  
+default prefix is "00"  
+default compressed_wif is True ("01")  
 
  `````
  ./btc_keypair 
  ./btc_keypair True
  ./btc_keypair True C4
+ ./btc_keypair False 05 False
  `````
 
 
 ### Requierements :
 
-- base58  : pip install base58
-- ecdsa   : pip install ecdsa
-- secrets : pip install secrets
+- python3.x
+- base58  : pip3 install base58
+- ecdsa   : pip3 install ecdsa
+- secrets : pip3 install secrets
 
 
 
@@ -37,3 +40,6 @@ default prefix is "00"
 - [Extended_Keys](https://learnmeabitcoin.com/technical/extended-keys)
 
 Thanks to https://learnmeabitcoin.com/ for all the informations needed to understand the Bitcoin Protocol.
+
+
+You can buy me a beer here (BTC) : 1BeergKrCLBnngHGwX1SgesSDWfbry5Wjh
