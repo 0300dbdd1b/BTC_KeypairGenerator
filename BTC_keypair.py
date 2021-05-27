@@ -90,27 +90,27 @@ def resize_bin(bin, nbits):
 
 
 def main():
-	compressed = False
+	compressed_xpub = True
 	compressed_wif = True
 	prefix = "00"
 	if (len(sys.argv) == 2):
-		compressed = sys.argv[1]
+		compressed_xpub = sys.argv[1]
 	if (len(sys.argv) == 3):
-		compressed = sys.argv[1]
+		compressed_xpub = sys.argv[1]
 		prefix = str(sys.argv[2])
 	if (len(sys.argv) == 4):
-		compressed = sys.argv[1]
+		compressed_xpub = sys.argv[1]
 		prefix = str(sys.argv[2])
 		compressed_wif = sys.argv[3]
 	entropy = secrets.randbits(256)
 	xpriv = hex(entropy)[2:]
 	if (len(xpriv) < 64):
 			xpriv = resize_bin(xpriv, 64)
-	xpub = get_xpub(xpriv, compressed)
+	xpub = get_xpub(xpriv, compressed_xpub)
 	xpub_hash = get_xpub_hash(xpub)
 	address = get_addr(xpub, prefix)
 	wif = wallet_import_format(xpriv, "80" ,compressed_wif)
-	print("compressed : ", compressed, "    prefix : ", prefix, "    compressed_wif : ", compressed_wif)
+	print("compressed_xpub : ", compressed_xpub, "    prefix : ", prefix, "    compressed_wif : ", compressed_wif)
 	print("\nxpriv : ", xpriv, "\nxpub : ", xpub, "\n\nxpub_hash : ", xpub_hash ,"\n\naddress : ", address, "\nWIF : ", wif)
 
 main()
