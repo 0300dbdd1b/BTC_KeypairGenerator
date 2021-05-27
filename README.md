@@ -10,15 +10,25 @@
 compressed , address_prefix and compressed_wif are optional  
 default compressed_xpub is True  
 default prefix is "00"  
-default compressed_wif is True ("01")  
+default compressed_wif is True ("01") 
 
+ ##### Examples :
  `````
  ./btc_keypair 
  ./btc_keypair True
  ./btc_keypair True C4
  ./btc_keypair False 05 False
  `````
-
+ ##### Address Prefix :
+ `````
+ Mainnet : 
+ 00 - P2PKH
+ 05 - P2SH
+ 
+ Testnet :
+ 6F - P2PKH
+ C4 - P2SH
+ `````
 
 ### Requierements :
 
