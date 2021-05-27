@@ -8,7 +8,7 @@
  ./btc_keypair [compressed_xpub] [address_prefix] [compressed_wif]
 ```
 compressed , address_prefix and compressed_wif are optional  
-default compressed_xpub is False  
+default compressed_xpub is True  
 default prefix is "00"  
 default compressed_wif is True ("01")  
 
