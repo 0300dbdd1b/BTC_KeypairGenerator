@@ -5,12 +5,13 @@
 ##  Use :
 
 ```
- ./btc_keypair [compressed_xpub] [address_prefix] [compressed_wif]
+ ./btc_keypair [compressed_xpub] [address_prefix] [compressed_wif] [base_to_convert]
 ```
 compressed , address_prefix and compressed_wif are optional  
 default compressed_xpub is True  
 default prefix is "00"  
-default compressed_wif is True ("01") 
+default compressed_wif is True ("01")
+default base is 256
 
  ##### Examples :
  `````
@@ -18,6 +19,7 @@ default compressed_wif is True ("01")
  ./btc_keypair True
  ./btc_keypair True C4
  ./btc_keypair False 05 False
+ ./btc_keypair True 00 False 1024
  `````
  ##### Address Prefix :
  `````
@@ -50,6 +52,3 @@ default compressed_wif is True ("01")
 - [Extended_Keys](https://learnmeabitcoin.com/technical/extended-keys)
 
 Thanks to https://learnmeabitcoin.com/ for all the informations needed to understand the Bitcoin Protocol.
-
-
-You can buy me a beer here (BTC) : 1BeergKrCLBnngHGwX1SgesSDWfbry5Wjh
