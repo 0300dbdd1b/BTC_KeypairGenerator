@@ -104,6 +104,7 @@ def main():
 	compressed_wif = True
 	prefix = "00"
 	base = 256
+	base_spec = False
 	if (len(sys.argv) == 2):
 		compressed_xpub = bool(sys.argv[1])
 	if (len(sys.argv) == 3):
@@ -118,6 +119,7 @@ def main():
 		prefix = str(sys.argv[2])
 		compressed_wif = bool(sys.argv[3])
 		base = int(sys.argv[4])
+		base_spec = True
 	entropy = randbits(256)
 	xpriv = hex(entropy)[2:]
 	if (len(xpriv) < 64):
@@ -131,8 +133,9 @@ def main():
 	print("Compressed_xpub : {}      Prefix : {}       Compressed_wif : {}\n".format(compressed_xpub, prefix, compressed_wif))
 	print("xpriv_hex\t: {}\nxpriv_b58\t: {}\nxpub_hex\t: {}\nxpub_b58\t: {}\nxpub_hash\t: {}\naddress\t\t: {}\nWIF\t\t: {}\n".format(xpriv, xpriv_b58, xpub, xpub_b58, xpub_hash, address, wif))
 	print("=================================")
-	print("xpriv in base ", base, "       :")
-	print(putnbr_base(int(xpriv, 16), base))
+	if (base_spec == True)
+		print("xpriv in base ", base, "       :")
+		print(putnbr_base(int(xpriv, 16), base))
 
 	
 main()
