@@ -132,8 +132,8 @@ def main():
 	wif = wallet_import_format(xpriv, "80" ,compressed_wif)
 	print("Compressed_xpub : {}      Prefix : {}       Compressed_wif : {}\n".format(compressed_xpub, prefix, compressed_wif))
 	print("xpriv_hex\t: {}\nxpriv_b58\t: {}\nxpub_hex\t: {}\nxpub_b58\t: {}\nxpub_hash\t: {}\naddress\t\t: {}\nWIF\t\t: {}\n".format(xpriv, xpriv_b58, xpub, xpub_b58, xpub_hash, address, wif))
-	print("=================================")
-	if (base_spec == True)
+	if (base_spec == True):
+		print("=================================")
 		print("xpriv in base ", base, "       :")
 		print(putnbr_base(int(xpriv, 16), base))
 
