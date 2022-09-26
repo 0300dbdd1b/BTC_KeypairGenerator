@@ -51,4 +51,4 @@ default base is 256
 - [Adress](https://learnmeabitcoin.com/technical/address)
 - [Extended_Keys](https://learnmeabitcoin.com/technical/extended-keys)
 
-Thanks to https://learnmeabitcoin.com/ for all the informations needed to understand the Bitcoin Protocol.
+Thanks to https://learnmeabitcoin.com/ for all the informations needed to understand the Bitcoin Protocol. 
